@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <script type="module">
+        import {
+getAnsattHTML, listAlleAnsatte, filtrerStilling, hentAlleKurs,hentAlleUndervisere, hentAdministrasjon, leggTilUnderviser, slettAnsatt
+} from '../oppgave1/actions.js';
+    </script>
+
+
+    <header>
+        <h1>Høyskolen Østfold</h1>
+    </header>
+        <section id="grupper">
+        <button onlclick="">Alle ansatte</button>
+        <button onlclick="">Undervisere</button>
+        <button onlclick="">Administrasjon</button>
+        </section>
+        <section id="filter"><h3>Vis kun stilling</h3>
+            <button onlclick="">Professorer</button>
+            <button onlclick="">Dekaner</button>
+            <button onlclick="">Rektor</button>
+            <button onlclick="">Vaktmestere</button>
+            <button onlclick="">Lektorer</button>
+        </section>
+    
+    <main>
+        <h2>Ansatte</h2>
+    </main>
+
+        
+
+</body>
+</html>
