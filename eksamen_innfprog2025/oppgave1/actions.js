@@ -1,4 +1,4 @@
-import { stillinger, kursListe, ansatte } from './Register.js';
+
 
 // 1. Returnerer HTML-kort for en ansatt basert på index
 function getAnsattHTML(index) {
@@ -70,15 +70,3 @@ if (index < 0 || index >= ansatte.length) return false;
 ansatte.splice(index, 1);
 return true;
 }
-export {
-getAnsattHTML,
-listAlleAnsatte,
-filtrerStilling,
-hentAlleKurs,
-hentAlleUndervisere,
-hentAdministrasjon,
-leggTilUnderviser,
-slettAnsatt
-};
-
-

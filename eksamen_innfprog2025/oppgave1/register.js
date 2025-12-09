@@ -208,6 +208,6 @@ epost: "jon.lek@hiof.no",
 kursansvar: ["Objektorientert programmering", "Programmering 1"]
 }
 ];
-export { stillinger, kursListe, ansatte };
+
 
     
