@@ -121,7 +121,7 @@ function leggTilUnderviser(fornavn, etternavn, kontor, stilling, epost, kursansv
         epost,
         kursansvar
     });
-}
+}   
 
 
 // 8) Slett ansatt etter index

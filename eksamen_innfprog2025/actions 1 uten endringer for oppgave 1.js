@@ -5,13 +5,13 @@ function lagAnsattKort(index) {
     if (!ansatt) return "<p>Ansatt ikke funnet</p>";
 
     return `
-        <div class="ansatt-kort">
+        <article class="ansatt-kort">
             <h3>${ansatt.fornavn} ${ansatt.etternavn}</h3>
             <p><strong>Stilling:</strong> ${stillinger[ansatt.stilling]}</p>
             <p><strong>Kontor:</strong> ${ansatt.kontor}</p>
             <p><strong>E-post:</strong> <a href="mailto:${ansatt.epost}">${ansatt.epost}</a></p> 
             <p><strong>Kursansvar:</strong> ${ansatt.kursansvar.length > 0 ? ansatt.kursansvar.join(", ") : "Ingen"}</p>
-        </div>
+        </articile>
     `;
 }
 
