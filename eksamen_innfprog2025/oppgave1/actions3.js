@@ -1,5 +1,5 @@
 
-
+//Første forsøk på funksjonene
 // 1. Returnerer HTML-kort for en ansatt basert på index
 function getAnsattHTML(index) {
 const a = ansatte[index];

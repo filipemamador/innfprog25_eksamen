@@ -6,6 +6,7 @@
     <title>Register</title>
 </head>
 <body>
+    <div id="grid-container">
     <script src="../oppgave1/register.js"></script>
     <script src="../oppgave1/actions.js"></script>
     
@@ -14,24 +15,29 @@
         <h1>Høyskolen Østfold</h1>
     </header>
         <section id="grupper">
-        <button onlclick="">Alle ansatte</button>
-        <button onlclick="">Undervisere</button>
-        <button onlclick="">Administrasjon</button>
+        <button onclick="">Alle ansatte</button>
+        <button onclick="filtrerUndervisere()">Undervisere</button>
+        <button onclick="">Administrasjon</button>
         </section>
         <section id="filter"><h3>Vis kun stilling:</h3>
-            <button onlclick="">Professorer</button>
-            <button onlclick="">Dekaner</button>
-            <button onlclick="">Rektor</button>
-            <button onlclick="">Vaktmestere</button>
-            <button onlclick="">Lektorer</button>
+            <button onclick="visEtterStilling(1)">Professorer</button>
+            <button onclick="visEtterStilling(2)">Dekaner</button>
+            <button onclick="visEtterStilling(0)">Rektor</button>
+            <button onclick="visEtterStilling(3)">Vaktmestere</button>
+            <button onclick="visEtterStilling(4)">Lektorer</button>
         </section>
     
-    <main id="ansatter">
-        <h2>Ansatte</h2>
-        <script> document.getElementById("ansatter").innerHTML= listeAlleAnsatte()</script>
+    <main id="">
+        <h2>Alle Ansatte</h2>
+        <section id="ansatte">
+        <script> listeAlleAnsatte(ansatte)</script>
+        </section>
     </main>
 
-        
+    <footer id="kursoversikt">
+        <script>document.getElementById("kursoversikt").innerHTML = hentAlleKurs();</script>
+    </footer>
+    </div>    
 
 </body>
 </html>

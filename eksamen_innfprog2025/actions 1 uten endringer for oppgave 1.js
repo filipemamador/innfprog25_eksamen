@@ -17,24 +17,16 @@ function lagAnsattKort(index) {
 
 
 // 2) Funksjon som lister ut ALLE ansatte og bruker funksjon 1 (Denne funksjon brukt jeg i oppgave 1)
-/*function listeAlleAnsatte() {
+//Måte skrive inn document.getElementById på html filen for at det skulle vises på nettleseren
+function listeAlleAnsatte() {
     let html = "";
     ansatte.forEach((_, index) => {
         html += lagAnsattKort(index);
     });
     return html;
 
-}*/
-//#OPPD3. 2) Ny funksjon som lister ut alle ansatte og bruker funksjon 1
-function listeAlleAnsatte(ansatteListe) {
-    let html = "";
+}
 
-    ansatteListe.forEach(a => {
-        const index = ansatte.indexOf(a);
-        html += lagAnsattKort(index);
-    });
-
-    document.getElementById("ansatte").innerHTML = html;}
 
 
 
@@ -42,18 +34,15 @@ function listeAlleAnsatte(ansatteListe) {
 // 3) Funksjon som filtrerer ansatte etter stilling (Denne funksjonen brukt jeg i oppgave 1)
 // stilling: tall som matcher indeksen i stillinger-arrayen
 // hvis stilling === "alle", returner alle ansatte
-/*function filtrerAnsatteStilling(stilling) {
+function filtrerAnsatteStilling(stilling) {
     if (stilling === "alle") {
         return ansatte;
     }  
 
     // stilling er tall (0–4)
     return ansatte.filter(a => a.stilling === stilling);
-}*/
-function visEtterStilling(stillingsIndex) {
-    const filtrert = ansatte.filter(a => a.stilling === stillingsIndex);
-    listeAlleAnsatte(filtrert);
 }
+
 
 
 
