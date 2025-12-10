@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Register</title>
 </head>
 <body>
-    <div id="grid-container">
+
     <script src="../oppgave1/register.js"></script>
     <script src="../oppgave1/actions.js"></script>
     
-
+    <div id="grid-container"></div>
     <header>
         <h1>Høyskolen Østfold</h1>
     </header>
+        <nav>
         <section id="grupper">
-        <button onclick="">Alle ansatte</button>
+        <button onclick="listeAlleAnsatte(ansatte)">Alle ansatte</button>
         <button onclick="filtrerUndervisere()">Undervisere</button>
-        <button onclick="">Administrasjon</button>
+        <button onclick="filtrerAdministrasjon()">Administrasjon</button>
         </section>
         <section id="filter"><h3>Vis kun stilling:</h3>
-            <button onclick="visEtterStilling(1)">Professorer</button>
-            <button onclick="visEtterStilling(2)">Dekaner</button>
             <button onclick="visEtterStilling(0)">Rektor</button>
-            <button onclick="visEtterStilling(3)">Vaktmestere</button>
+            <button onclick="visEtterStilling(1)">Professorer</button>
             <button onclick="visEtterStilling(4)">Lektorer</button>
+            <button onclick="visEtterStilling(2)">Dekaner</button>
+            <button onclick="visEtterStilling(3)">Vaktmestere</button>
+
         </section>
+        </nav>
     
     <main id="">
         <h2>Alle Ansatte</h2>
@@ -35,7 +39,7 @@
     </main>
 
     <footer id="kursoversikt">
-        <script>document.getElementById("kursoversikt").innerHTML = hentAlleKurs();</script>
+        <script>hentAlleKurs();</script>
     </footer>
     </div>    
 

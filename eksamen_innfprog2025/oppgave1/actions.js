@@ -25,7 +25,9 @@ function lagAnsattKort(index) {
     return html;
 
 }*/
-//#OPPD3. 2) Ny funksjon som lister ut alle ansatte og bruker funksjon 1
+
+//#OPPD3
+//  2) Ny funksjon som lister ut alle ansatte og bruker funksjon 1
 function listeAlleAnsatte(ansatteListe) {
     let html = "";
 
@@ -50,14 +52,16 @@ function listeAlleAnsatte(ansatteListe) {
     // stilling er tall (0–4)
     return ansatte.filter(a => a.stilling === stilling);
 }*/
+
+//#OPPD3 3)
+//  Funksjon som filtrerer ansatte etter stilling ved bruk av indexen
 function visEtterStilling(stillingsIndex) {
     const filtrert = ansatte.filter(a => a.stilling === stillingsIndex);
     listeAlleAnsatte(filtrert);
 }
 
 
-
-// 4) Funksjon som returnerer HTML-liste over alle kurs
+/*// 4) Funksjon som returnerer HTML-liste over alle kurs
 function hentAlleKurs() {
     let html = "<ul>";
     kursListe.forEach(kurs => {
@@ -65,19 +69,44 @@ function hentAlleKurs() {
     });
     html += "</ul>";
     return html;
+}*/
+
+// #OPPD3
+//  4) Funksjon som returnerer HTML-liste over alle kurs
+function hentAlleKurs() {
+    let html = "<ul>";
+    kursListe.forEach(kurs => {
+        html += `<li>${kurs}</li>`;
+    });
+    html += "</ul>";
+    document.getElementById("kursoversikt").innerHTML = html;
 }
 
 
-// 5) Filtrer alle undervisere (professorer + lektorer)
+// 5) Filtrer alle undervisere (professorer og lektorer)
 // eller: alle ansatte som har minst 1 kursansvar
-function filtrerUndervisere() {
+/*function filtrerUndervisere() {
     return ansatte.filter(a => a.kursansvar.length > 0);
-}
+}*/
+
+//#OPPD3
+// 5) Filtrer alle unervisere (Kun professorer og lektorer)
+
+function filtrerUndervisere() {
+    const filtrert = ansatte.filter(a => a.kursansvar.length > 0);
+    listeAlleAnsatte(filtrert);}
 
 
 // 6) Filtrer administrasjon (ingen kursansvar)
-function filtrerAdministrasjon() {
+/*function filtrerAdministrasjon() {
     return ansatte.filter(a => a.kursansvar.length === 0);
+}*/
+// #OPPD3
+// 6) Filtrer administrasjon (ingen kursansvar)
+
+function filtrerAdministrasjon() {
+    const filtrert = ansatte.filter(a => a.kursansvar.length === 0);
+    listeAlleAnsatte(filtrert);
 }
 
 

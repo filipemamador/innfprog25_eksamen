@@ -1,0 +1,10 @@
+#grid-container{
+    display: grid;
+    box-sizing: border-box;
+    grid-template-areas: "head head head"
+                         "main main main"
+                         "footer footer footer";
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
