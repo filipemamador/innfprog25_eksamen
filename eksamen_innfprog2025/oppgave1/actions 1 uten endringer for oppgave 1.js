@@ -34,13 +34,17 @@ function listeAlleAnsatte() {
 // 3) Funksjon som filtrerer ansatte etter stilling (Denne funksjonen brukt jeg i oppgave 1)
 // stilling: tall som matcher indeksen i stillinger-arrayen
 // hvis stilling === "alle", returner alle ansatte
-function filtrerAnsatteStilling(stilling) {
+/*function filtrerAnsatteStilling(stilling) {
     if (stilling === "alle") {
         return ansatte;
     }  
 
     // stilling er tall (0–4)
     return ansatte.filter(a => a.stilling === stilling);
+}*/
+function visEtterStilling(stillingsIndex) {
+    const filtrert = ansatte.filter(a => a.stilling === stillingsIndex);
+    listeAlleAnsatte(filtrert);
 }
 
 
