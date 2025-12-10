@@ -6,9 +6,9 @@
     <title>Register</title>
 </head>
 <body>
-    <script src="../oppgave1/actions.js"></script>
     <script src="../oppgave1/register.js"></script>
-
+    <script src="../oppgave1/actions.js"></script>
+    
 
     <header>
         <h1>Høyskolen Østfold</h1>
@@ -18,7 +18,7 @@
         <button onlclick="">Undervisere</button>
         <button onlclick="">Administrasjon</button>
         </section>
-        <section id="filter"><h3>Vis kun stilling</h3>
+        <section id="filter"><h3>Vis kun stilling:</h3>
             <button onlclick="">Professorer</button>
             <button onlclick="">Dekaner</button>
             <button onlclick="">Rektor</button>
@@ -26,9 +26,9 @@
             <button onlclick="">Lektorer</button>
         </section>
     
-    <main>
+    <main id="ansatter">
         <h2>Ansatte</h2>
-        <script>listAlleAnsatte();</script>
+        <script> document.getElementById("ansatter").innerHTML= listeAlleAnsatte()</script>
     </main>
 
         
