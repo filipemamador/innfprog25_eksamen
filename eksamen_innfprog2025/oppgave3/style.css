@@ -1,10 +1,38 @@
 #grid-container{
     display: grid;
-    box-sizing: border-box;
+ 
     grid-template-areas: "head head head"
                          "main main main"
                          "footer footer footer";
+   
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
+}
+#main{
+    grid-area:main;
+    display: grid;
+}
+head{
+    grid-area: head;
+}
+
+.title{
+    display: grid;
+    justify-content: center;
+}
+#ansatte{
+    display: flex;
+    flex-wrap:wrap;
+    width: 100%;
+    padding:1rem;
+    margin:1rem;
+    justify-content: space-between;
+}
+.ansatt-kort{
+    max-width: 300px;
+    
+}
+footer{
+    grid-area:footer;
 }

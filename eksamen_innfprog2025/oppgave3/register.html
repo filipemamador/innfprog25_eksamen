@@ -11,9 +11,9 @@
     <script src="../oppgave1/register.js"></script>
     <script src="../oppgave1/actions.js"></script>
     
-    <div id="grid-container"></div>
+    <div id="grid-container">
     <header>
-        <h1>Høyskolen Østfold</h1>
+        <h1 class="title">Høyskolen Østfold</h1>
     </header>
         <nav>
         <section id="grupper">
@@ -31,15 +31,18 @@
         </section>
         </nav>
     
-    <main id="">
-        <h2>Alle Ansatte</h2>
+    <main id="main">
+        <h2 class="title">Alle Ansatte</h2>
         <section id="ansatte">
         <script> listeAlleAnsatte(ansatte)</script>
         </section>
     </main>
 
-    <footer id="kursoversikt">
-        <script>hentAlleKurs();</script>
+    <footer>
+        <h3>Kursoversikt</h3>
+        <article id="kursoversikt">
+        <script >hentAlleKurs();</script>
+        </article>
     </footer>
     </div>    
 
