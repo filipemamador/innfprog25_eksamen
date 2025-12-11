@@ -21,7 +21,7 @@
         <button onclick="filtrerUndervisere()">Undervisere</button>
         <button onclick="filtrerAdministrasjon()">Administrasjon</button>
         </section>
-        <section id="filter"><h3>Vis kun stilling:</h3>
+        <section id="filter"><h3 class="vks">Vis kun stilling:</h3>
             <button onclick="visEtterStilling(0)">Rektor</button>
             <button onclick="visEtterStilling(1)">Professorer</button>
             <button onclick="visEtterStilling(4)">Lektorer</button>
@@ -32,15 +32,15 @@
         </nav>
     
     <main id="main">
-        <h2 class="title">Alle Ansatte</h2>
+        <h2 class="second-title">Alle Ansatte</h2>
         <section id="ansatte">
         <script> listeAlleAnsatte(ansatte)</script>
         </section>
     </main>
 
     <footer>
-        <h3>Kursoversikt</h3>
-        <article id="kursoversikt">
+        <h3 class="second-title">Kursoversikt</h3>
+        <article id="kursoversikt" class="second-title">
         <script >hentAlleKurs();</script>
         </article>
     </footer>

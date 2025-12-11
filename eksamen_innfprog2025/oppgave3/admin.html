@@ -3,43 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
     <title>Admin</title>
 </head>
 <body>
     <div id="grid-container">
-    <script src="../oppgave1/register.js"></script>
-    <script src="../oppgave1/actions.js"></script>
+
     
 
     <header>
-        <h1>Høyskolen Østfold</h1>
+        <h1 class="title">Høyskolen Østfold</h1>
     </header>
 
     
     <main id="main">
-        <h2>Legge til ansatt</h2>
+        <h2 class="second-title">Legge til ansatt</h2>
         <form id="Ny-Ansatt">
         <label for ="fornavn">Fornvan: </label> <input type="text" id="fornavn" placeholder="Fornavn">
         <label for ="etternavn">Etternavn: </label> <input type="text" id="etternavn" placeholder="Etternavn">
         <label for ="kontor">Kontor: </label> <input type="text" id="kontor" placeholder="Kontor">
-        <label for ="stilling">Stilling: </label> <input type="text" id="stilling" placeholder="Stilling">
+
+        <label for ="stilling">Stilling: </label><select id="stilling">
+            <option value="0">Rektor</option>
+            <option value="1">Professor</option>
+            <option value="2">Dekan</option>
+            <option value="3">Vaktmester</option>
+            <option value="4">Lektor</option>
+            </select>
+            
         <label for ="email">E-post: </label> <input type="email" id="epost" placeholder="E-post">
         <label for ="kursansvar">Kursansvar: </label> <input type="text" id="kursansvar" placeholder="Kursansvar">
-        <input type="submit" value ="submit">
+        <input class="submit" type="submit" value ="Leg til ny ansatt">
 
         </form>
 
 
-        <h2>Alle Ansatte</h2>
+        <h2 class="second-title">Alle Ansatte</h2>
         <section id="ansatte">
-        <script> listeAlleAnsatte(ansatte)</script>
+
         </section>
     </main>
 
-    <footer id="kursoversikt">
-        <script>hentAlleKurs();</script>
+    <footer>
+        <h3 class="second-title">Kursoversikt</h3>
+        <article id="kursoversikt" class="second-title">
+
+        </article>
     </footer>
     </div>    
-
+    <script src="../oppgave1/register.js"></script>
+    <script src="../oppgave1/actions.js"></script>
+    <script> listeAlleAnsatte(ansatte, true)</script>
+    <script >hentAlleKurs();</script>
 </body>
 </html>
