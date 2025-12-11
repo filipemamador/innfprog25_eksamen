@@ -28,3 +28,4 @@ add("objektorientert")
 #5
 resultat = lungo(prw)
 print("Lengst:", resultat)
+
