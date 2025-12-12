@@ -110,4 +110,8 @@ button{
     border-color:#4A8DB2;
     padding: 10px;
 }
+input, select{
+    border: solid;
+    width: max-content;
+}
 

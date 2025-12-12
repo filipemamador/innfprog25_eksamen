@@ -19,11 +19,12 @@
     <main id="main">
         <h2 class="second-title">Legge til ansatt</h2>
         <form id="Ny-Ansatt">
-        <label for ="fornavn">Fornvan: </label> <input type="text" id="fornavn" placeholder="Fornavn">
-        <label for ="etternavn">Etternavn: </label> <input type="text" id="etternavn" placeholder="Etternavn">
-        <label for ="kontor">Kontor: </label> <input type="text" id="kontor" placeholder="Kontor">
+        <label for ="fornavn">Fornvan: </label> <input type="text" id="fornavn" placeholder="Fornavn" required>
+        <label for ="etternavn">Etternavn: </label> <input type="text" id="etternavn" placeholder="Etternavn" required>
+        <label for ="kontor">Kontor: </label> <input type="text" id="kontor" placeholder="Kontor" required>
 
-        <label for ="stilling">Stilling: </label><select id="stilling">
+        <label for ="stilling">Stilling: </label><select required id="stilling">
+            <option value="">Stilling</option>
             <option value="0">Rektor</option>
             <option value="1">Professor</option>
             <option value="2">Dekan</option>
@@ -32,7 +33,7 @@
             </select>
             
         <label for ="email">E-post: </label> <input type="email" id="epost" placeholder="E-post">
-        <label for ="kursansvar">Kursansvar: </label> <input type="text" id="kursansvar" placeholder="Kursansvar">
+        <label for ="kursansvar">Kursansvar: </label> <input type="text" id="kursansvar" placeholder="Kursansvar" required>
         <input class="submit" type="submit" value ="Leg til ny ansatt">
 
         </form>
