@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refaktorering</title>
+</head>
+<body>
+    <script>
+        //Denne koden finner det lengste ordet i en liste med ord.
+        function start() {
+            let ordListe = ["kode", "programmering", "design", "data", "variabel"];
+
+            const finnLengsteOrd = liste => { //Endret til en arrow funksjon
+                let lengste = "";
+                for (let i = 0; i < liste.length; i++) {
+                    let ord = liste[i];
+                    if (ord.length > lengste.length) 
+                        lengste = ord;
+                    /*} else {
+                        // Trenger ikke siden den gjør ingenting
+                    }*/
+                }
+                return lengste;
+            }
+
+            const skrivUtResultat = () => {  //Endret til en arrow funksjon
+                //let resultat = finnLengsteOrd(ordListe); Trenger ikke siden det er en arrow funksjon og ble flyttet ned              
+                console.log("Det lengste ordet i listen er:", finnLengsteOrd(ordListe));
+            };
+
+            skrivUtResultat();
+        }
+
+        start();
+
+        //Denne koden regner ut gjennomsnittsalderen til en gruppe personer.
+       /*function startProgram() {
+            let personer = [
+                { navn: "Ola", alder: 24 },
+                { navn: "Kari", alder: 32 },
+                { navn: "Per", alder: 29 },
+                { navn: "Anne", alder: 41 }
+            ];
+
+            function hentAldre(liste) {
+                let alderArray = [];
+                for (let i = 0; i < liste.length; i++) {
+                    let person = liste[i];
+                    alderArray.push(person.alder);
+                }
+                return alderArray;
+            }
+
+            function regnUtGjennomsnitt(alderArray) {
+                let sum = 0;
+                for (let i = 0; i < alderArray.length; i++) {
+                    sum = sum + alderArray[i];
+                }
+                let gjennomsnitt = sum / alderArray.length;
+                return gjennomsnitt;
+            }
+
+            function visResultat() {
+                let alderArray = hentAldre(personer);
+                let gjennomsnitt = regnUtGjennomsnitt(alderArray);
+                console.log("Gjennomsnittsalderen er " + gjennomsnitt);
+            }
+
+            visResultat();
+        }
+
+        startProgram();*/
+                //Denne koden regner ut gjennomsnittsalderen til en gruppe personer.
+        const startProgram = () => {
+            let personer = [
+                { navn: "Ola", alder: 24 },
+                { navn: "Kari", alder: 32 },
+                { navn: "Per", alder: 29 },
+                { navn: "Anne", alder: 41 }
+            ];
+
+            const hentAldre = liste =>  //Endret til en arrow funksjon
+                liste.map(p => p.alder); //Arrow funksjon som tar parameter liste og returnerer en liste/array med bare alder verdiene
+                                            //.map(p=>p.alder) går gjennom arrayen og tar ut alder
+
+            const regnUtGjennomsnitt = alderArray => { //Endret til en array funksjon og vet at det er mulig å gjøre det enda kortere, ved bruk av arrow funksjoner men jeg fikk ikke det til
+                let sum = 0;
+                for (let i = 0; i < alderArray.length; i++) {
+                    sum = sum + alderArray[i];
+                }
+                let gjennomsnitt = sum / alderArray.length;
+                return gjennomsnitt;
+            }
+
+            const visResultat = () => { //Endret til en arrow funksjon
+                let alderArray = hentAldre(personer);
+                let gjennomsnitt = regnUtGjennomsnitt(alderArray);
+                console.log("Gjennomsnittsalderen er " + gjennomsnitt);
+            }
+
+            visResultat();
+        }
+
+        startProgram();
+    </script>
+</body>
+</html>
